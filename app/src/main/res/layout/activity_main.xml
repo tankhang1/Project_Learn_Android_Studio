@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/txt_base"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="120dp"
+        android:text="Base"
+        android:textSize="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/base_editText"
+        android:layout_width="278dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:ems="10"
+        android:hint="Bill Amount"
+        android:inputType="number"
+        android:text=""
+
+        android:textAlignment="center"
+        android:textSize="24dp"
+
+        app:layout_constraintBottom_toBottomOf="@+id/txt_base"
+        app:layout_constraintStart_toEndOf="@+id/txt_base"
+        app:layout_constraintTop_toTopOf="@+id/txt_base" />
+
+    <TextView
+        android:id="@+id/txt_seekbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        android:layout_marginTop="64dp"
+        android:text=""
+        android:textSize="24dp"
+        android:textStyle="bold"
+        app:flow_horizontalAlign="center"
+        app:layout_constraintStart_toStartOf="@+id/txt_base"
+        app:layout_constraintTop_toBottomOf="@+id/txt_base" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+
+        app:flow_horizontalAlign="center"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_seekbar"
+        app:layout_constraintStart_toStartOf="@+id/base_editText"
+        app:layout_constraintTop_toTopOf="@+id/txt_seekbar" />
+
+    <TextView
+        android:id="@+id/tip_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="Tip"
+        android:textSize="24dp"
+        app:layout_constraintStart_toStartOf="@id/txt_seekbar"
+        app:layout_constraintTop_toBottomOf="@id/txt_seekbar" />
+    <TextView
+        android:id="@+id/tip_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="24dp"
+        app:layout_constraintStart_toStartOf="@id/seekBar"
+        app:layout_constraintTop_toTopOf="@id/tip_label"
+        app:layout_constraintBottom_toBottomOf="@id/tip_label"/>
+
+    <TextView
+        android:id="@+id/total_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="Total"
+        android:textSize="24dp"
+        app:layout_constraintStart_toStartOf="@id/tip_label"
+        app:layout_constraintTop_toBottomOf="@id/tip_label" />
+    <TextView
+        android:id="@+id/total_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="24dp"
+        app:layout_constraintStart_toStartOf="@id/tip_result"
+        app:layout_constraintTop_toTopOf="@id/total_label"
+        app:layout_constraintBottom_toBottomOf="@id/total_label"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
